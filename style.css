@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 .item{
     display: none;
     width: 100%;
@@ -87,4 +80,46 @@
 
 .item.active .title {
     animation: toActive 0.5s ease-in-out 1;
+}
+
+
+
+
+/* Media Queries para tornar o site responsivo */
+@media (max-width: 768px) {
+    .item .title {
+        font-size: 5rem; /* Ajuste para telas menores */
+    }
+
+    .item .refri {
+        width: 300px; /* Reduzindo a imagem para telas menores */
+    }
+
+    .item .fruit {
+        width: 70%; /* Reduzindo a fruta para não ocupar toda a tela */
+    }
+
+    #prev, #next {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item .title {
+        font-size: 3rem; /* Tamanho ainda menor para smartphones */
+    }
+
+    .item .refri {
+        width: 200px; /* Diminuindo ainda mais a imagem do refrigerante */
+    }
+
+    .item .fruit {
+        width: 60%; /* Reduzir a fruta para smartphones */
+    }
+
+    #prev, #next {
+        width: 30px;
+        height: 30px;
+    }
 }
