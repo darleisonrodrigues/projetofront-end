@@ -1,3 +1,95 @@
+
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.item {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img.fruit, .item img.refri {
+    max-width: 100%;
+    height: auto;
+}
+
+.arrow {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.arrow button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .arrow {
+        width: 100%;
+    }
+
+    .arrow button {
+        font-size: 1.2rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        padding: 10px;
+    }
+
+    .arrow button {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .item{
     display: none;
     width: 100%;
