@@ -1,4 +1,4 @@
-/* Estilo geral para todos os dispositivos */
+/* Estilo geral */
 body {
     margin: 0;
     padding: 0;
@@ -24,11 +24,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* Ajuste para centralização */
 }
 
-.item img.fruit, .item img.refri {
-    max-width: 100%;
+.item img.fruit {
+    max-width: 50%; /* Reduzimos o tamanho da fruta */
     height: auto;
+    position: absolute;
+    top: 50px; /* Ajuste a altura para posicionar a fruta */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a imagem da fruta */
+}
+
+.item img.refri {
+    max-width: 50%; /* Lata também centralizada */
+    height: auto;
+    margin-top: 120px; /* Dá mais espaço entre a fruta e a lata */
 }
 
 .arrow {
@@ -61,7 +72,11 @@ main {
     }
 
     .title {
-        font-size: 1.5rem; /* Tamanho menor da fonte para os nomes das frutas */
+        font-size: 1.5rem; /* Tamanho menor para títulos */
+        position: absolute;
+        top: 20px; /* Ajusta a posição do título */
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -75,36 +90,25 @@ main {
     }
 
     .title {
-        font-size: 1.2rem; /* Tamanho reduzido da fonte para celulares */
-        margin-bottom: 10px; /* Adiciona um pouco de margem abaixo do título */
+        font-size: 1.2rem; /* Tamanho ainda menor em telas menores */
+        top: 10px; /* Reduz o espaço superior */
     }
 
-    .item img.fruit, .item img.refri {
-        max-width: 70%; /* Reduz o tamanho das imagens para celulares */
-        margin-bottom: 20px; /* Aumenta o espaçamento entre as imagens das frutas */
+    .item img.fruit {
+        max-width: 60%; /* Tamanho das frutas em celulares */
+        top: 40px; /* Posiciona a fruta mais perto do topo */
+    }
+
+    .item img.refri {
+        max-width: 60%; /* Latas menores */
+        margin-top: 100px; /* Espaço menor entre fruta e lata */
     }
 
     .arrow button {
         font-size: 0.8rem;
         padding: 5px 10px;
     }
-
-    .item img.fruit, .item img.refri {
-        max-width: 60%; /* Diminuímos um pouco mais o tamanho das imagens */
-    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
