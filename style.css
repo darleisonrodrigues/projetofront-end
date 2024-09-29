@@ -1,76 +1,46 @@
-
-/* Estilo geral */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-}
-
-.item {
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.item img.fruit, .item img.refri {
-    max-width: 100%;
-    height: auto;
-}
-
-.arrow {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 600px;
-    margin-top: 20px;
-}
-
-.arrow button {
-    padding: 10px 20px;
-    font-size: 1.5rem;
-}
-
-/* Media queries para telas menores */
-@media (max-width: 768px) {
-    .item {
-        width: 100%;
-        padding: 15px;
+/* Ajuste para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
     }
 
-    .arrow {
-        width: 100%;
+    .item {
+        padding: 5px;
+    }
+
+    .title {
+        font-size: 1.2rem;
     }
 
     .arrow button {
-        font-size: 1.2rem;
-        padding: 8px 15px;
+        font-size: 0.8rem;
+        padding: 5px 10px;
     }
 }
 
-@media (max-width: 480px) {
+/* Ajustes gerais para tablets e dispositivos médios */
+@media (max-width: 768px) {
     .item {
+        width: 95%; /* Usar quase toda a largura */
         padding: 10px;
+    }
+
+    .arrow {
+        width: 95%; /* Botões de navegação ocupando quase toda a largura */
+    }
+
+    .title {
+        font-size: 1.5rem; /* Tamanho menor para o título em telas menores */
     }
 
     .arrow button {
         font-size: 1rem;
-        padding: 6px 10px;
+        padding: 8px 15px;
     }
+}
+
+.item img.fruit, .item img.refri {
+    max-width: 80%; /* Diminui um pouco mais o tamanho das imagens em telas pequenas */
 }
 
 
