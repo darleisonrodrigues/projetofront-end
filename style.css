@@ -88,15 +88,23 @@
 /* Media Queries para tornar o site responsivo */
 @media (max-width: 768px) {
     .item .title {
-        font-size: 5rem; /* Ajuste para telas menores */
+        font-size: 4rem; /* Ajuste para telas menores */
     }
 
     .item .refri {
-        width: 300px; /* Reduzindo a imagem para telas menores */
+        width: 250px; /* Reduzindo a imagem das latas */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Centralizando as latas */
     }
 
     .item .fruit {
-        width: 70%; /* Reduzindo a fruta para não ocupar toda a tela */
+        width: 60%; /* Ajustando a fruta */
+        position: absolute;
+        left: 50%;
+        top: 20%; /* Centralizando a fruta um pouco mais acima */
+        transform: translate(-50%, 0);
     }
 
     #prev, #next {
@@ -107,15 +115,23 @@
 
 @media (max-width: 480px) {
     .item .title {
-        font-size: 3rem; /* Tamanho ainda menor para smartphones */
+        font-size: 2.5rem; /* Ajuste ainda menor para smartphones */
     }
 
     .item .refri {
-        width: 200px; /* Diminuindo ainda mais a imagem do refrigerante */
+        width: 150px; /* Diminuindo ainda mais as latas */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Mantendo centralizadas */
     }
 
     .item .fruit {
-        width: 60%; /* Reduzir a fruta para smartphones */
+        width: 50%; /* Ajustando a fruta para telas pequenas */
+        position: absolute;
+        left: 50%;
+        top: 20%; /* Centralizando a fruta acima */
+        transform: translate(-50%, 0);
     }
 
     #prev, #next {
