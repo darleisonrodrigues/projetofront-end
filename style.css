@@ -1,7 +1,88 @@
-/* Ajuste para telas muito pequenas (celulares) */
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.item {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img.fruit, .item img.refri {
+    max-width: 100%;
+    height: auto;
+}
+
+.arrow {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.arrow button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 1080px) {
+    .item img.fruit, .item img.refri {
+        max-width: 70%; /* Diminui o tamanho das imagens */
+    }
+
+    .arrow button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .arrow {
+        width: 95%;
+    }
+
+    .arrow button {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 12px; /* Tamanho de fonte menor para celulares */
     }
 
     .item {
@@ -9,40 +90,18 @@
     }
 
     .title {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .arrow button {
         font-size: 0.8rem;
-        padding: 5px 10px;
+        padding: 5px 8px;
+    }
+
+    .item img.fruit, .item img.refri {
+        max-width: 60%; /* Reduz mais o tamanho das imagens */
     }
 }
-
-/* Ajustes gerais para tablets e dispositivos médios */
-@media (max-width: 768px) {
-    .item {
-        width: 95%; /* Usar quase toda a largura */
-        padding: 10px;
-    }
-
-    .arrow {
-        width: 95%; /* Botões de navegação ocupando quase toda a largura */
-    }
-
-    .title {
-        font-size: 1.5rem; /* Tamanho menor para o título em telas menores */
-    }
-
-    .arrow button {
-        font-size: 1rem;
-        padding: 8px 15px;
-    }
-}
-
-.item img.fruit, .item img.refri {
-    max-width: 80%; /* Diminui um pouco mais o tamanho das imagens em telas pequenas */
-}
-
 
 
 
