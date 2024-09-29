@@ -1,4 +1,4 @@
-/* Estilo geral */
+/* Estilo geral para todos os dispositivos */
 body {
     margin: 0;
     padding: 0;
@@ -15,9 +15,9 @@ main {
 }
 
 .item {
-    width: 90%;
-    max-width: 500px; /* Reduzimos o limite de largura */
-    padding: 15px;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
     margin: 10px 0;
     border-radius: 10px;
     color: white;
@@ -27,24 +27,24 @@ main {
 }
 
 .item img.fruit, .item img.refri {
-    max-width: 80%; /* Reduzimos o tamanho máximo das imagens */
+    max-width: 100%;
     height: auto;
 }
 
 .arrow {
     display: flex;
     justify-content: space-between;
-    width: 90%; /* Aumentamos o tamanho da área de setas */
-    max-width: 500px;
+    width: 80%;
+    max-width: 600px;
     margin-top: 20px;
 }
 
 .arrow button {
     padding: 10px 20px;
-    font-size: 1.2rem; /* Diminuímos o tamanho das fontes dos botões */
+    font-size: 1.5rem;
 }
 
-/* Media queries para telas menores */
+/* Media queries para ajustar APENAS telas menores (celulares) */
 @media (max-width: 768px) {
     .item {
         width: 95%;
@@ -61,13 +61,13 @@ main {
     }
 
     .title {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Tamanho menor da fonte para os nomes das frutas */
     }
 }
 
 @media (max-width: 480px) {
     body {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .item {
@@ -75,18 +75,25 @@ main {
     }
 
     .title {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Tamanho reduzido da fonte para celulares */
+        margin-bottom: 10px; /* Adiciona um pouco de margem abaixo do título */
+    }
+
+    .item img.fruit, .item img.refri {
+        max-width: 70%; /* Reduz o tamanho das imagens para celulares */
+        margin-bottom: 20px; /* Aumenta o espaçamento entre as imagens das frutas */
     }
 
     .arrow button {
         font-size: 0.8rem;
-        padding: 5px 8px;
+        padding: 5px 10px;
     }
 
     .item img.fruit, .item img.refri {
-        max-width: 60%; /* Reduzimos ainda mais o tamanho das imagens */
+        max-width: 60%; /* Diminuímos um pouco mais o tamanho das imagens */
     }
 }
+
 
 
 
